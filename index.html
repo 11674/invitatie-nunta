@@ -1,7 +1,9 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html> <html lang="ro"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Invitație Nuntă</title> </head> <body>
 <style> 
 
 body {
-    background-image: url('https://wallpapers.com/images/hd/rustic-background-ozawmmzzf44n1cq2.jpg');
+    background-image: url('https://img.freepik.com/premium-vector/brown-beige-rustic-modern-trendy-vector-design-frame-background-fall-boho-template_181182-47469.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,6 +11,56 @@ body {
     margin: 0;
     padding: 0;
 }
+@media (max-width: 600px) {
+
+  section {
+    padding: 40px 20px !important;
+  }
+  }
+@media (max-width: 600px) {
+  h1, h2, .titlu-mare {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+  }
+
+  .nume-miri {
+    font-size: 48px !important;
+  }
+
+  .data-mare {
+    font-size: 28px !important;
+  }
+}
+  .container {
+    width: 100% !important;
+    padding: 0 15px !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+@media (max-width: 600px) {
+  button, .btn {
+    width: 100% !important;
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .formular, form, .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px !important;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll !important;
+  }
+}
+
 </style>
 <!-- Import fonturi -->
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Alex+Brush&display=swap" rel="stylesheet">
@@ -31,7 +83,7 @@ body {
       font-size: 18px;
       font-family: 'EB Garamond', serif;
       letter-spacing: 1px;
-      color: black;
+      color: white;
   ">
     VĂ INVITĂM SĂ CELEBRAȚI IUBIREA NOASTRĂ
   </div>
@@ -43,7 +95,7 @@ body {
       max-width: 600px;
       font-size: 90px;
       font-family: 'Alex Brush', cursive;
-      color: black;
+      color: white;
       line-height: 1;
   ">
     Cristian & Larisa
@@ -56,7 +108,7 @@ body {
   font-size: 25px; 
   font-family: 'EB Garamond', serif; 
   letter-spacing: 1px; 
-  color: black; font-weight: bold; "> 
+  color: white; font-weight: bold; "> 
   6 IUNIE 2026 </div>
 
 </section>
@@ -483,9 +535,12 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     text-align: center;
-	background: rgba(255,255,255,0.6); backdrop-filter: blur(2px); border-radius: 12px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(2px);
+    border-radius: 12px;
 ">
-<!-- DECOR STÂNGA SUS (mutată mai în colț, mai departe de text) -->
+
+    <!-- DECOR STÂNGA SUS -->
     <img src="https://firebasestorage.googleapis.com/v0/b/invitera-ro.firebasestorage.app/o/studio-library%2Fgraphic%2F1764435787129_tl(169).webp?alt=media"
          style="
             position:absolute;
@@ -494,10 +549,10 @@ body {
             width:180px;
             height:auto;
             opacity:0.95;
-            z-index:1;
+            z-index:0; /* sub text și carduri */
          ">
 
-    <!-- DECOR DREAPTA JOS (nicio schimbare) -->
+    <!-- DECOR DREAPTA JOS -->
     <img src="https://firebasestorage.googleapis.com/v0/b/invitera-ro.firebasestorage.app/o/studio-library%2Fgraphic%2F1764435761896_tl(160).webp?alt=media"
          style="
             position:absolute;
@@ -506,8 +561,9 @@ body {
             width:260px;
             height:auto;
             opacity:0.95;
-            z-index:1;
+            z-index:0; /* sub text și carduri */
          ">
+
     <!-- TITLU -->
     <h2 style="
         font-family: 'Playfair Display', serif;
@@ -515,6 +571,8 @@ body {
         color: #8A6A4A;
         line-height: 0.8;
         margin-bottom: 20px;
+        position: relative;
+        z-index: 2; /* deasupra decorului */
     ">
         Când &amp Unde
     </h2>
@@ -525,6 +583,8 @@ body {
         height: 2px;
         background: white;
         margin: 0 auto 25px auto;
+        position: relative;
+        z-index: 2;
     "></div>
 
     <!-- SUBTITLU -->
@@ -536,6 +596,8 @@ body {
         letter-spacing: 2px;
         max-width: 700px;
         margin: 0 auto 50px auto;
+        position: relative;
+        z-index: 2;
     ">
         Aici ne vom spune DA, ne vom bucura și vom dansa până târziu.
     </p>
@@ -547,142 +609,137 @@ body {
         gap: 40px;
         flex-wrap: wrap;
         margin-top: 40px;
+        position: relative;
+        z-index: 3; /* cardurile sunt cele mai sus */
     ">
 
-<!-- CARD CEREMONIA RELIGIOASĂ -->
-<div style="
-    width: 280px;
-    background: white;
-    border: 1px solid #8A6A4A;
-    border-radius: 35px;
-    padding: 0;
-    overflow: hidden;
-    text-align: center;
-">
+        <!-- CARD CEREMONIA RELIGIOASĂ -->
+        <div style="
+            width: 280px;
+            background: white;
+            border: 1px solid #8A6A4A;
+            border-radius: 35px;
+            padding: 0;
+            overflow: hidden;
+            text-align: center;
+        ">
 
-    <!-- TITLU -->
-    <h3 style="
-        font-family: 'Playfair Display', serif;
-        font-size: 20px;
-        color: #8A6A4A;
-        margin: 20px 0 15px 0;
-    ">
-        Ceremonia Religioasă
-    </h3>
+            <h3 style="
+                font-family: 'Playfair Display', serif;
+                font-size: 20px;
+                color: #8A6A4A;
+                margin: 20px 0 15px 0;
+            ">
+                Ceremonia Religioasă
+            </h3>
 
-    <!-- POZA CARDULUI -->
-    <div style="
-        width:100%;
-        height:180px;
-        overflow:hidden;
-        border-radius:0;
-    ">
-        <img src="img3.jpg"
-             style="width:100%; height:100%; object-fit:cover;">
-    </div>
+            <div style="
+                width:100%;
+                height:180px;
+                overflow:hidden;
+            ">
+                <img src="img3.jpg" style="width:100%; height:100%; object-fit:cover;">
+            </div>
 
-    <!-- TEXT CONTINUT -->
-    <p style="
-        font-family: 'EB Garamond', serif;
-        font-size: 17px;
-        color: #2E2520;
-        line-height: 1.4;
-        margin: 20px 0 10px 0;
-        white-space: pre-line;
-    ">
-        Parohia Ortodoxă Română Palencia
-        06 Iunie 2026
-        Ora 11:00
-    </p>
+            <p style="
+                font-family: 'EB Garamond', serif;
+                font-size: 17px;
+                color: #2E2520;
+                line-height: 1.4;
+                margin: 20px 0 10px 0;
+                white-space: pre-line;
+            ">
+                Parohia Ortodoxă Română Palencia
+                06 Iunie 2026
+                Ora 11:00
+            </p>
 
-    <!-- BUTON GOOGLE MAPS -->
-    <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0xd47b135a73f4bd1:0x2a2494e4a168382c?sa=X&ved=1t:8290&ictx=111" target="_blank" style="
-        display: inline-block;
-        margin-bottom: 20px;
-        padding: 10px 20px;
-        background: #8A6A4A;
-        color: white;
-        font-family: 'EB Garamond', serif;
-        font-size: 17px;
-        border-radius: 25px;
-        text-decoration: none;
-        transition: 0.3s;
-    ">
-        Vezi locația
-    </a>
+            <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0xd47b135a73f4bd1:0x2a2494e4a168382c?sa=X&ved=1t:8290&ictx=111"
+               target="_blank"
+               style="
+                    display: inline-block;
+                    margin-bottom: 20px;
+                    padding: 10px 20px;
+                    background: #8A6A4A;
+                    color: white;
+                    font-family: 'EB Garamond', serif;
+                    font-size: 17px;
+                    border-radius: 25px;
+                    text-decoration: none;
+                    transition: 0.3s;
+               ">
+                Vezi locația
+            </a>
 
-</div>
+        </div>
 
-<!-- CARD PETRECEREA -->
-<div style="
-    width: 280px;
-    background: white;
-    border: 1px solid #8A6A4A;
-    border-radius: 35px;
-    padding: 0;
-    overflow: hidden;
-    text-align: center;
-">
+        <!-- CARD PETRECEREA -->
+        <div style="
+            width: 280px;
+            background: white;
+            border: 1px solid #8A6A4A;
+            border-radius: 35px;
+            padding: 0;
+            overflow: hidden;
+            text-align: center;
+        ">
 
-    <!-- TITLU -->
-    <h3 style="
-        font-family: 'Playfair Display', serif;
-        font-size: 20px;
-        color: #8A6A4A;
-        margin: 20px 0 15px 0;
-    ">
-        Petrecerea
-    </h3>
+            <h3 style="
+                font-family: 'Playfair Display', serif;
+                font-size: 20px;
+                color: #8A6A4A;
+                margin: 20px 0 15px 0;
+            ">
+                Petrecerea
+            </h3>
 
-    <!-- POZA CARDULUI -->
-    <div style="
-        width:100%;
-        height:180px;
-        overflow:hidden;
-        border-radius:0;
-    ">
-        <img src="img4.jpeg"
-             style="width:100%; height:100%; object-fit:cover;">
-    </div>
+            <div style="
+                width:100%;
+                height:180px;
+                overflow:hidden;
+            ">
+                <img src="img4.jpeg" style="width:100%; height:100%; object-fit:cover;">
+            </div>
 
-    <!-- TEXT CONTINUT -->
-    <p style="
-        font-family: 'EB Garamond', serif;
-        font-size: 17px;
-        color: #2E2520;
-        line-height: 1.4;
-        margin: 20px 0 10px 0;
-        white-space: pre-line;
-    ">
-        Momentan nu avem locația finală,
-        dar petrecerea va avea loc
-        la o casă rurală, în aer liber până a doua zi.
-        Revenim în curând cu detalii.
-    </p>
+            <p style="
+                font-family: 'EB Garamond', serif;
+                font-size: 17px;
+                color: #2E2520;
+                line-height: 1.4;
+                margin: 20px 0 10px 0;
+                white-space: pre-line;
+            ">
+                Momentan nu avem locația finală,
+                dar petrecerea va avea loc
+                la o casă rurală, în aer liber până a doua zi.
+                Revenim în curând cu detalii.
+            </p>
 
-    <!-- BUTON GOOGLE MAPS (placeholder până decideți locul) -->
-    <a href="https://maps.google.com" target="_blank" style="
-        display: inline-block;
-        margin-bottom: 20px;
-        padding: 10px 20px;
-        background: #8A6A4A;
-        color: white;
-        font-family: 'EB Garamond', serif;
-        font-size: 17px;
-        border-radius: 25px;
-        text-decoration: none;
-        transition: 0.3s;
-    ">
-        Locația va fi anunțată
-    </a>
+            <a href="https://maps.google.com"
+               target="_blank"
+               style="
+                    display: inline-block;
+                    margin-bottom: 20px;
+                    padding: 10px 20px;
+                    background: #8A6A4A;
+                    color: white;
+                    font-family: 'EB Garamond', serif;
+                    font-size: 17px;
+                    border-radius: 25px;
+                    text-decoration: none;
+                    transition: 0.3s;
+               ">
+                Locația va fi anunțată
+            </a>
 
-</div>
-
+        </div>
 
     </div>
 
 </section>
+
 <div style=" width: 60%; height: 1px; background: linear-gradient(to right, transparent, #8A6A4A, transparent); margin: 80px auto; "></div>
+
 <section style="
     max-width: 1200px;
     margin: 0 auto;
@@ -1068,21 +1125,14 @@ body {
 
     <!-- NUMELE -->
     <div style="
-        font-size: 59px;
+        font-size: 55px;
         color: rgb(138, 106, 74);
         font-family: 'Alex Brush';
         line-height: 0.8;
         margin-bottom: 20px;
     ">
         Cristian &amp; Larisa
-        <span style="
-            display:inline-block;
-            width:3px;
-            height:1em;
-            background:currentColor;
-            margin-left:4px;
-            animation:pulse 1.5s infinite;
-        "></span>
+       
     </div>
 
     <!-- INIMA BOHO -->
@@ -1101,3 +1151,5 @@ body {
     </div>
 
 </section>
+</body>
+</html>
